@@ -62,3 +62,41 @@ void printAllStudents(Student students[], int count) {
         cout << endl;
     }
 }
+
+int main() {
+    const int MAX_STUDENTS = 100;
+    Student students[MAX_STUDENTS];
+    int count = 0;
+
+    while (true) {
+        // Prompt the user to select an option
+        cout << "Enter option (1 to add, 2 to search, 3 to print all, 4 to exit): ";
+        int option;
+        cin >> option;
+
+        switch (option) {
+            case 1:
+                // Call the addStudent function to add a new student record
+                addStudent(students, count);
+                break;
+            case 2:
+                // Call the searchStudentByName function to search for a student by name
+                searchStudentByName(students, count);
+                break;
+            case 3:
+                // Call the printAllStudents function to print all student records
+                printAllStudents(students, count);
+                break;
+            case 4:
+                // Exit the program
+                cout<<"MADE BY 22CS003 - Pratham aghera "<<endl <<"\t22CS039 - Krish mavani"<<endl <<"\t22CS092 - Sujal vekariya"<<endl;
+                return 0;
+            default:
+                // Display an error message if an invalid option is selected
+                cout << "Invalid option." << endl;
+        }
+    }
+
+
+    return 0;
+}
