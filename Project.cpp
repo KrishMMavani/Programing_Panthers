@@ -51,3 +51,14 @@ void searchStudentByName(Student students[], int count) {
         cout << "Student not found." << endl;
     }
 }
+// Function to print all student records
+void printAllStudents(Student students[], int count) {
+    // Loop through the students array and display each record
+    system("color F1");
+    for (int i = 0; i < count; i++) {
+        cout << "Name: " << students[i].name << endl;
+        cout << "Age: " << students[i].age << endl;
+        cout << "Marks: " << students[i].marks << endl;
+        cout << endl;
+    }
+}
